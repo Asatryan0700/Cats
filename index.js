@@ -19,7 +19,7 @@ const getCats = function(){
                 <span>${el.rate}/10</span>
                 <span>ID: ${el.id}</span>
                 <p>${el.description}</p>
-                <a onclick="console.log(${el.id})" href="/cats2/cat-page.html?${el.id}">see more</a>
+                <a onclick="console.log(${el.id})" href="/cats0070.github.io/cat-page.html?${el.id}">see more</a>
                 <br>
                 </div>
             `;
