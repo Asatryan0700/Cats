@@ -1,4 +1,4 @@
-let api = "andy1337;
+let api = "andy1337";
 const box = document.querySelector(".container");
 const ddd = window.location;
 
@@ -9,24 +9,23 @@ const getCats = function(){
     .then(data => {
         data.data.forEach(el => {
             if(el.id && el.name) {
-
-    let card = `
-      <div class="card">
-        <div class="card-img" style="${el.img_link && `background-image: url(${el.img_link})`}"></div>
-        <h4>${el.name}</h4>
-        <br>
-        <span>Возраст ${el.age} лет/года</span>
-        <br>
-        <span>${el.rate}/10</span>
-        <span>ID: ${el.id}</span>
-        <p>${el.description}</p>
-        <a href="/cats2/pageofcat.html?${el.id}">see more</a>
-        <br>
-      </div>
-    `;
-      box.innerHTML += card;
-            }
-        });
+            let card = `
+                <div class="card">
+                <div class="card-img" style="${el.img_link && `background-image: url(${el.img_link})`}"></div>
+                <h4>${el.name}</h4>
+                <br>
+                <span>Возраст ${el.age} лет/года</span>
+                <br>
+                <span>${el.rate}/10</span>
+                <span>ID: ${el.id}</span>
+                <p>${el.description}</p>
+                <a onclick="console.log(${el.id})" href="/cats2/cat-page.html?${el.id}">see more</a>
+                <br>
+                </div>
+            `;
+            box.innerHTML += card;
+            
+        }});
     })
     
 };
